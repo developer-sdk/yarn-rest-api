@@ -6,7 +6,7 @@ import json
 class Yarn():
     
     def __init__(self, yarn_url, response_type = "json"):
-        self.yarn_url = yarn_url    # http://10.11.96.221:8088
+        self.yarn_url = yarn_url                # http://192.168.10.1:8088
         self.response_type = response_type
         self.http = HttpRequest()
 
@@ -52,13 +52,34 @@ class Yarn():
         uri = "/ws/v1/cluster/appstatistics"
         return self.request_yarn(uri, params)
 
+    def cluster_application(self, app_id):
+        uri = "/ws/v1/cluster/apps/" + app_id
+        return self.request_yarn(uri)
+
+    def cluster_application_attempts(self, app_id):
+        uri = "/ws/v1/cluster/apps/" + app_id + "/appattempts"
+        return self.request_yarn(uri)
+
+    def cluster_nodes(self, params=None):
+        uri = "/ws/v1/cluster/nodes"
+        return self.request_yarn(uri, params)
+
+    def cluster_node(self, node_id):
+        uri = "/ws/v1/cluster/nodes/" + node_id
+        return self.request_yarn(uri)
+
 if __name__ == '__main__':
-    yarn = Yarn("http://127.0.0.1:8088", 'json')
+    yarn = Yarn("http://192.168.10.1:8088", 'json')
     # json_obj = yarn.cluster_information()
     # json_obj = yarn.cluster_metrics()
     # json_obj = yarn.cluster_scheduler()
     # json_obj = yarn.cluster_applications()  # query
     # json_obj = yarn.cluster_appstatistics()
-    json_obj = yarn.cluster_appstatistics({"states":"accepted,running,finished","applicationTypes":"mapreduce"})
+    # json_obj = yarn.cluster_appstatistics({"states":"accepted,running,finished","applicationTypes":"mapreduce"})
+    # json_obj = yarn.cluster_application("job_id")
+    # json_obj = yarn.cluster_application_attempts("job_id")
+    # json_obj = yarn.cluster_nodes()
+    # json_obj = yarn.cluster_nodes({"states":"RUNNING"})  # NEW, RUNNING, UNHEALTHY, DECOMMISSIONING, DECOMMISSIONED, LOST, REBOOTED, SHUTDOWN
+    json_obj = yarn.cluster_node("node_id")
 
     print(json.dumps(json_obj, indent=4, sort_keys=True))
