@@ -5,16 +5,20 @@ with open("README.md", "r") as fh:
         
 setup(
     name             = 'hadoop-yarn-rest-api',
-    version          = '0.1',
+    version          = '0.2',
     description      = 'Python wrapper for Hadoop YARN REST API',
     #long_description = open('README.rst').read(),
     long_description=long_description,
-    long_description_content_type='text/markdown; charset=UTF-8',
+    long_description_content_type="text/markdown",
     author           = 'hs_seo',
     author_email     = 'fluorite118@gmail.com',
     url              = 'https://github.com/developer-sdk/yarn-rest-api',
     download_url     = 'https://github.com/developer-sdk/yarn-rest-api/archive/master.zip',
     packages         = find_packages(exclude = ['docs', 'tests*']),
     keywords         = ['hadoop', 'yarn', 'rest', 'api'],
-    zip_safe         = False
+    classifiers=[
+        "Programming Language :: Python :: 2",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )
