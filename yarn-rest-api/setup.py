@@ -1,8 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
-with open("README.md", "r") as fh:
+with open("./README.md", "r") as fh:
     long_description = fh.read()
-        
+
+print(long_description)
+
 setup(
     name             = 'hadoop-yarn-rest-api',
     version          = '0.2',
@@ -14,7 +16,8 @@ setup(
     author_email     = 'fluorite118@gmail.com',
     url              = 'https://github.com/developer-sdk/yarn-rest-api',
     download_url     = 'https://github.com/developer-sdk/yarn-rest-api/archive/master.zip',
-    packages         = find_packages(exclude = ['docs', 'tests*']),
+    #packages         = find_packages(exclude = ['docs', 'tests*']),
+    packages         = ["hadoop"],
     keywords         = ['hadoop', 'yarn', 'rest', 'api'],
     classifiers=[
         "Programming Language :: Python :: 2",
