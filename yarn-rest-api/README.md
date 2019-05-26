@@ -16,6 +16,8 @@ pip install hadoop-yarn-rest-api
 ```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from hadoop.yarn import Yarn
+
 
 if __name__ == '__main__':
 	yarn_url = "http://localhost:8088"
