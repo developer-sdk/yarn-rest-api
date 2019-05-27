@@ -1,6 +1,6 @@
-# Hadoop YARN Rest API
+# Hadoop YARN REST API
 
-This is Python Library for Hadoop YARN rest api.
+This is Python Library for Hadoop YARN REST api.
 
 This project follows the [Resource Manager Rest](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html) document.
 

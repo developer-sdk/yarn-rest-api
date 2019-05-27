@@ -7,11 +7,11 @@ print(long_description)
 
 setup(
     name             = 'hadoop-yarn-rest-api',
-    version          = '0.2',
+    version          = '0.3',
     description      = 'Python wrapper for Hadoop YARN REST API',
-    #long_description = open('README.rst').read(),
-    long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description = open('README.rst').read(),
+    #long_description=long_description,
+    #long_description_content_type="text/markdown",
     author           = 'hs_seo',
     author_email     = 'fluorite118@gmail.com',
     url              = 'https://github.com/developer-sdk/yarn-rest-api',
