@@ -7,7 +7,7 @@ print(long_description)
 
 setup(
     name             = 'hadoop-yarn-rest-api',
-    version          = '0.3',
+    version          = '0.4',
     description      = 'Python wrapper for Hadoop YARN REST API',
     long_description = open('README.rst').read(),
     #long_description=long_description,
