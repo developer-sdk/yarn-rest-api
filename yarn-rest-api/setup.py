@@ -3,8 +3,6 @@ from setuptools import setup
 with open("./README.md", "r") as fh:
     long_description = fh.read()
 
-print(long_description)
-
 setup(
     name             = 'hadoop-yarn-rest-api',
     version          = '0.4',
