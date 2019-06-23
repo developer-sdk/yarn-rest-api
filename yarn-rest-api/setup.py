@@ -1,11 +1,11 @@
 from setuptools import setup
 
-with open("./README.md", "r") as fh:
-    long_description = fh.read()
+#with open("./README.md", "r") as fh:
+#    long_description = fh.read()
 
 setup(
     name             = 'hadoop-yarn-rest-api',
-    version          = '0.4',
+    version          = '1.0.0',
     description      = 'Python wrapper for Hadoop YARN REST API',
     long_description = open('README.rst').read(),
     #long_description=long_description,
