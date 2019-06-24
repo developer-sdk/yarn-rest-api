@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from httputil import HttpRequest
+import sys
+
+if sys.version_info[0] == 3:
+    from httputil3 import HttpRequest
+else:
+    from httputil2 import HttpRequest
+    
 import xml.etree.ElementTree as ET
 import json
 
