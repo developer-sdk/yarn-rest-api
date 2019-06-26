@@ -3,9 +3,9 @@
 import sys
 
 if sys.version_info[0] == 3:
-    from httputil3 import HttpRequest
+    from hadoop.httputil3 import HttpRequest
 else:
-    from httputil2 import HttpRequest
+    from hadoop.httputil2 import HttpRequest
     
 import xml.etree.ElementTree as ET
 import json
